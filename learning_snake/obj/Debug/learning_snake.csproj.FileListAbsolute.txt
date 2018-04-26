@@ -1,0 +1,7 @@
+C:\git\learning_snake\learning_snake\bin\Debug\learning_snake.exe.config
+C:\git\learning_snake\learning_snake\bin\Debug\learning_snake.exe
+C:\git\learning_snake\learning_snake\bin\Debug\learning_snake.pdb
+C:\git\learning_snake\learning_snake\obj\Debug\learning_snake.csprojResolveAssemblyReference.cache
+C:\git\learning_snake\learning_snake\obj\Debug\learning_snake.csproj.CoreCompileInputs.cache
+C:\git\learning_snake\learning_snake\obj\Debug\learning_snake.exe
+C:\git\learning_snake\learning_snake\obj\Debug\learning_snake.pdb
