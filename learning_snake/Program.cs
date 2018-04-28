@@ -11,38 +11,49 @@ namespace learning_snake
         static void Main(string[] args)
         {
             Point p1 = new Point(1, 3, '*');
-            //p1.x = 1;
-            //p1.y = 3;
-            //p1.sym = '*';
             p1.Draw();
 
             Point p2 = new Point(4, 5, '#');
-            //p2.x = 4;
-            //p2.y = 5;
-            //p2.sym = '#';
             p2.Draw();
 
+            Point p3 = new Point(7, 5, 'x');
+            p2.Draw();
 
-            //int x1 = 1;
-            //int y1 = 3;
-            //char sym1 = '*';
+            Point p4 = new Point(44, 14, 'r');
+            p2.Draw();
 
-            //Draw(x1, y1, sym1);
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
+            pList.Add(p3);
+            pList.Add(p4);
+            Console.WriteLine("");
 
-            //int x2 = 4;
-            //int y2 = 5;
-            //char sym2 = '#';
+            List<string> oda = new List<string>();
+            oda.Add("Однажны в студеную зимнюю пору");
+            oda.Add("Я из лесу вышел, был сильный мороз");
+            oda.Add("Гляжу");
+            oda.Add("Лошадка");
 
-            //Draw(x2, y2, sym2);
-            
+            foreach(string i in oda)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine(oda[3]);
+            Console.WriteLine(oda[2]);
+            Console.WriteLine(oda[0]);
+            Console.WriteLine(oda[1]);
+
+            //foreach(Point i in pList)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
             Console.ReadLine();
         }
 
-        //static void Draw(int x, int y, char sym)
-        //{
-        //    Console.SetCursorPosition(x, y);
-        //    Console.Write(sym);
-
-        //}
     }
 }
