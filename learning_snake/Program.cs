@@ -10,23 +10,25 @@ namespace learning_snake
     {
         static void Main(string[] args)
         {
-            //Point p1 = new Point(1, 3, '*');
-            //p1.Draw();
+            Console.SetBufferSize(80, 25);
 
-            //Point p2 = new Point(4, 5, '#');
-            //p2.Draw();
+            //рама
+            HorizontallLine topLine = new HorizontallLine(0, 78, 0, '+');
+            HorizontallLine bottomLine = new HorizontallLine(0, 78, 24, '+');
+            VerticallLine leftLine = new VerticallLine(0, 24, 0, '+');
+            VerticallLine rightLine = new VerticallLine(0, 24, 78, '+');
 
-            //Point p3 = new Point(7, 5, 'x');
-            //p3.Draw();
+            topLine.Draw();
+            bottomLine.Draw();
+            leftLine.Draw();
+            rightLine.Draw();
 
-            //Point p4 = new Point(44, 14, 'r');
-            //p4.Draw();
 
-            HorizontallLine HLine = new HorizontallLine(4, 60, 5, '*');
-            HLine.Draw();
+            //и точка
+            Point p = new Point(4, 5, '*');
+            p.Draw();
 
-            VerticallLine VLine = new VerticallLine(1, 20, 19, 'x');
-            VLine.Draw();
+       
 
             Console.ReadLine();
         }
