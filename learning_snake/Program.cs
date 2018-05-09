@@ -10,13 +10,18 @@ namespace learning_snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(80, 25);
+            //изначально 80,25 но на ноуте ругается(
+            Console.SetBufferSize(120, 30);
 
             //рама
-            HorizontallLine topLine = new HorizontallLine(0, 78, 0, '+');
-            HorizontallLine bottomLine = new HorizontallLine(0, 78, 24, '+');
-            VerticallLine leftLine = new VerticallLine(0, 24, 0, '+');
-            VerticallLine rightLine = new VerticallLine(0, 24, 78, '+');
+           // HorizontallLine topLine = new HorizontallLine(0, 78, 0, '+');
+            //HorizontallLine bottomLine = new HorizontallLine(0, 78, 24, '+');
+            //VerticallLine leftLine = new VerticallLine(0, 24, 0, '+');
+            //VerticallLine rightLine = new VerticallLine(0, 24, 78, '+');
+            HorizontallLine topLine = new HorizontallLine(0, 118, 0, '+');
+            HorizontallLine bottomLine = new HorizontallLine(0, 118, 29, '+');
+            VerticallLine leftLine = new VerticallLine(0, 29, 0, '+');
+            VerticallLine rightLine = new VerticallLine(0, 29, 118, '+');
 
             topLine.Draw();
             bottomLine.Draw();
@@ -26,7 +31,7 @@ namespace learning_snake
 
             //и точка
             Point p = new Point(4, 5, '*');
-            p.Draw();
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
 
        
 
