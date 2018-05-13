@@ -17,7 +17,7 @@ namespace learning_snake
             for (int i = 0; i < length; i++)
             {
                 Point p = new Point(tail);
-                p.Move(i, direction);
+                p.Move(i, direction); 
                 pList.Add(p);
             }
         }
@@ -42,6 +42,18 @@ namespace learning_snake
             return nextPoint;
         }
 
-        
+        public void HandleKey(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                direction = Direction.LEFT;
+            else if (key == ConsoleKey.RightArrow)
+                direction = Direction.RIGHT;
+            else if (key == ConsoleKey.UpArrow)
+                direction = Direction.UP;
+            else if (key == ConsoleKey.DownArrow)
+                direction = Direction.DOWN;
+
+        }
+
     }
 }
