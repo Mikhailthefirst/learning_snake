@@ -14,25 +14,13 @@ namespace learning_snake
             //изначально 80,25 но на ноуте ругается(
             Console.SetBufferSize(120, 30);
 
-            //рама
-           // HorizontallLine topLine = new HorizontallLine(0, 78, 0, '+');
-            //HorizontallLine bottomLine = new HorizontallLine(0, 78, 24, '+');
-            //VerticallLine leftLine = new VerticallLine(0, 24, 0, '+');
-            //VerticallLine rightLine = new VerticallLine(0, 24, 78, '+');
-            HorizontallLine topLine = new HorizontallLine(0, 118, 0, '+');
-            HorizontallLine bottomLine = new HorizontallLine(0, 118, 29, '+');
-            VerticallLine leftLine = new VerticallLine(0, 29, 0, '+');
-            VerticallLine rightLine = new VerticallLine(0, 29, 118, '+');
-
-            topLine.Draw();
-            bottomLine.Draw();
-            leftLine.Draw();
-            rightLine.Draw();
+            Walls walls = new Walls(120, 30);
+            walls.Draw();
 
 
             //и точка
             Point p = new Point(4, 5, '*');
-            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            Snake snake = new Snake(p, 3, Direction.RIGHT);
             snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(118, 29, '$');
@@ -41,6 +29,10 @@ namespace learning_snake
 
             while (true)
             {
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
                 if (snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
